@@ -5,11 +5,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 @WebServlet("/count")
 public class Counter extends HttpServlet {
 
-    public int counter = 0;
+    private int counter = 0;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -18,6 +17,5 @@ public class Counter extends HttpServlet {
         counter += 1;
         res.getWriter().println("<h1>"+counter+"</h1>");
     }
-
 }
 

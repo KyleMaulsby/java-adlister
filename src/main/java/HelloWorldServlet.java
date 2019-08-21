@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 @WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
@@ -21,6 +20,5 @@ public class HelloWorldServlet extends HttpServlet {
         }
         res.getWriter().println("<h1>Hello "+name+"</h1>");
     }
-
 }
 
